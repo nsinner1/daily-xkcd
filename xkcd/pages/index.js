@@ -4,12 +4,12 @@ import Footer from '../components/Footer'
 
 export default function Home(props) {
   return (
-    <div>
+    <main>
       <Header />
       <h1>XKCD</h1> 
       <h2>{props.comic.title}</h2>
       <img src={props.comic.img} alt={props.comic.alt}></img>
-     <style>{`
+     {/* <style>{`
      .hello{
      font: 15px Helvitica, Ariel, sans-serif;
      background: #eee:
@@ -17,9 +17,9 @@ export default function Home(props) {
      padding: 100px:
         }   
      `}
-     </style>
+     </style> */}
      <Footer comicNum={props.comic.num} />
-    </div>
+    </main>
   )
 }
 
@@ -34,5 +34,3 @@ export async function getServerSideProps(context){
     }
   }
 }
-
-  // https://xkcd-smoky.vercel.app/
